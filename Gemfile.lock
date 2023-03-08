@@ -3,7 +3,7 @@ PATH
   specs:
     sidekiq (6.4.0)
       connection_pool (>= 2.2.2)
-      rack (~> 2.0)
+      rack (>= 2, < 4)
       redis (>= 4.2.0)
 
 GEM
@@ -55,6 +55,11 @@ GEM
     activerecord (6.1.4.4)
       activemodel (= 6.1.4.4)
       activesupport (= 6.1.4.4)
+    activerecord-jdbc-adapter (61.2-java)
+      activerecord (~> 6.1.0)
+    activerecord-jdbcsqlite3-adapter (61.2-java)
+      activerecord-jdbc-adapter (= 61.2)
+      jdbc-sqlite3 (~> 3.8, < 3.30)
     activestorage (6.1.4.4)
       actionpack (= 6.1.4.4)
       activejob (= 6.1.4.4)
@@ -74,7 +79,7 @@ GEM
       json
       simplecov
     concurrent-ruby (1.1.9)
-    connection_pool (2.2.5)
+    connection_pool (2.3.0)
     crass (1.0.6)
     digest (3.1.0)
     docile (1.3.2)
@@ -86,6 +91,7 @@ GEM
     i18n (1.8.11)
       concurrent-ruby (~> 1.0)
     io-wait (0.2.1)
+    jdbc-sqlite3 (3.28.0)
     json (2.3.1)
     json (2.3.1-java)
     loofah (2.13.0)
@@ -117,7 +123,7 @@ GEM
       ast (~> 2.4.1)
     racc (1.6.0)
     racc (1.6.0-java)
-    rack (2.2.3)
+    rack (2.2.6.3)
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
     rails (6.1.4.4)
